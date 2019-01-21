@@ -1,0 +1,1911 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    <title>Dailo Online Store</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="https://fonts.googleapis.com/css?family=BioRhyme" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="website.css" />
+    <link rel="stylesheet" href="website.js" />
+    <link rel="stylesheet" href="login-page.css" />
+    <link rel="stylesheet" href="register.css" />
+    <link rel="stylesheet" href="cart.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <!-- Placed at the end of the document so the pages load faster -->
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+        <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.2.1/js/bootstrap.min.js"></script>
+        <script src="website.js"></script>
+
+         <!-- Load React. -->
+  <!-- Note: when deploying, replace "development.js" with "production.min.js". -->
+  <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+  <!-- Load our React component. -->
+  <link rel="stylesheet" href="css/reset.css" />
+  <!-- CSS reset -->
+  <link rel="stylesheet" href="css/style.css" />
+<script src="js/main.js"></script>
+
+  </head>
+  <!-- BODY STARTS  -->
+<!--NAVBAR STARTS -->
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container-fluid">
+
+      <a>
+          <img class="logo" src="dailo.jpg" alt="Bird" width="50" height="50">
+          
+        </a>
+            
+
+    <div class="navbar-header">
+
+      <button
+        type="button"
+        class="navbar-toggle"
+        data-toggle="collapse"
+        data-target="#myNavbar"
+      >
+      
+        <span class="icon-bar"></span> 
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <i class="navbar-brand dailo-header">
+          DAILO-ONLINE-STORE
+            </i>
+
+    </div>
+    <ul class="nav navbar-nav">
+              
+        <li>
+          <a 
+          href="index.html" 
+          >
+          <span class="glyphicon glyphicon-home"></span> 
+          Home 
+          </a>
+        <li>
+          <a
+            href="#">
+            <span class="glyphicon glyphicon-envelope"></span> 
+            Contact
+          </a>
+
+        </li>
+
+      </ul>
+
+
+    <div class="collapse navbar-collapse" id="myNavbar">
+
+
+      <ul class="nav navbar-nav">
+        
+        <li>
+          <a 
+          href="payment" 
+            data-tip="Quick View"
+            data-toggle="modal"
+            data-target="#checkout"
+          >
+
+      </ul>
+
+      <ul class="nav navbar-nav navbar-right">
+        
+      </ul>
+        <ul class="nav navbar-nav navbar-right">
+        
+          <li class="dropdown show-on-hover">
+            <a
+              href="http://www.jquery2dotnet.com"
+              class="dropdown-toggle"
+              data-toggle="dropdown"
+              >
+              <span class="glyphicon glyphicon-user"></span> 
+              Account <b class="caret"></b
+            ></a>
+            
+            <ul class="dropdown-menu" style="padding: 15px;min-width: 250px;">
+              <li>
+                <div class="row">
+                  <div class="col-md-12">
+                    <form
+                      class="form"
+                      role="form"
+                      method="post"
+                      action="login"
+                      accept-charset="UTF-8"
+                      id="login-nav"
+                    >
+                      <div class="form-group">
+                        <label class="sr-only" for="exampleInputEmail2"
+                          >Email address</label
+                        >
+                        <input
+                          type="email"
+                          class="form-control"
+                          id="exampleInputEmail2"
+                          placeholder="Email address"
+                          required
+                        />
+                      </div>
+                      <div class="form-group">
+                        <label class="sr-only" for="exampleInputPassword2"
+                          >Password</label
+                        >
+                        <input
+                          type="password"
+                          class="form-control"
+                          id="exampleInputPassword2"
+                          placeholder="Password"
+                          required
+                        />
+                      </div>
+                      <div class="checkbox">
+                        <label> <input type="checkbox" /> Remember me </label>
+                      </div>
+                      <div class="form-group">
+                        <button
+                          type="submit"
+                          class="btn btn-success btn-block"
+                        >
+                          Sign in
+                        </button>
+                        <button
+                        href="register" 
+                        data-tip="Quick View"
+                        data-toggle="modal"
+                        data-target="#register"
+                        type="button" 
+                        class="btn btn-info navbar-content"
+                          
+                        >
+                          Register
+                        </button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </li>
+          
+              <li class="divider"></li>
+              <li class="navbar-footer">
+                <a href="https://en-gb.facebook.com/login/" class="fb btn" >
+                  <i class="fa fa-facebook fa-fw"></i> Login with Facebook
+                </a>
+                <a href="#" class="twitter btn">
+                  <i class="fa fa-twitter fa-fw"></i> Login with Twitter
+                </a>
+                <a href="#" class="google btn"
+                  ><i class="fa fa-google fa-fw"> </i> Login with Google+
+                </a>
+              </li>
+            </ul>
+          </li>
+      
+      </ul>
+
+      <ul class="nav navbar-nav navbar-right">
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"> 
+              <span class="glyphicon glyphicon-heart"></span> Wishlist <span class="caret"></span></a>
+            <ul class="dropdown-menu dropdown-cart" role="menu">
+                <li class="java-logo skill-box">
+                    <span class="item">
+                      <span class="item-left"  id="placehere">
+                            <span class="item-info">
+                              <span>Item name</span>
+                              <span>23$</span>
+                          </span>
+                          
+                      </span>
+                      <span class="item-right">
+                          <button class="btn btn-xs btn-danger pull-right">x</button>
+                      </span>
+                  </span>
+                </li>
+                
+                <li class="divider"></li>
+                <div class="navbar-footer">
+                    <div class="navbar-footer-content">
+                      <li class="divider"></li>
+                      <li>
+                          <button 
+                          href="payment" 
+                          data-tip="Quick View"
+                          data-toggle="modal"
+                          data-target="#payment"
+                          type="button" 
+                          class="btn btn-info navbar-content"
+                            >
+                            buy
+                            </button>          
+                    <br>
+                    <br>
+                    <button 
+                          href="#" 
+                          data-tip="Quick View"
+                          data-toggle="modal"
+                          data-target="#"
+                          type="button" 
+                          class="btn btn-info navbar-content"
+                      >
+                      clear
+                    </button>
+                    </li>
+                    </div>
+                </div>
+            </ul>
+          </li>
+      </ul>
+
+       
+                <div class="col-md-4 col-md-offset-2">
+                     <form action="" class="search-form">
+                        <div class="form-group has-feedback">
+                        <label for="search" class="sr-only">Search</label>
+                        <input type="text" class="form-control" name="search" id="search" placeholder="search">
+                          <span class="glyphicon glyphicon-search form-control-feedback"></span>
+                      </div>
+                    </form>
+                </div>
+
+    </div>
+
+    </div>
+  </div>
+</nav>
+<!--NAVBAR ENDS -->
+
+<body class="BIK-liht-grey" id="onload" onlad="myonload_Function()">
+    <!-- BODY DIV -->
+  
+    <!-- cd-cart-container -->
+        
+<div class="cd-cart-container empty">
+  
+    <a 
+    href="#0"
+    class="btn btn-success btn-sm cd-cart-trigger" 
+    >
+      <i class=""></i>
+      <span class="badge badge-light">3</span>
+      
+      <ul class="count">
+        <!-- cart items count -->
+        <li>0</li>
+        <li>0</li>
+      </ul>
+      <!-- .count -->
+    </a>
+    
+    <div class="cd-cart">
+      <div class="wrapper">
+        <header>
+          <h2>Cart</h2>
+          <span class="undo">Item removed. <a href="#0">Undo</a></span>
+        </header>
+
+        <div class="body">
+          <ul>
+            <!-- products added to the cart will be inserted here using JavaScript -->
+          </ul>
+        </div>
+
+        <footer>
+            
+
+          <a href="payment" 
+          class="checkout btn" 
+          data-tip="Quick View"
+          data-toggle="modal"
+          data-target="#payment"
+            ><em>Checkout - $<span>0</span></em></a
+          >
+        </footer>
+      </div>
+    </div>
+    <!-- .cd-cart -->
+  </div>
+<!-- FIRST PRODUCT_LITS STARTS -->
+<div class="container">
+    <h3 class="h3">DAILO_PRODUCT_LIST </h3>
+    <div class="row">
+        <div class="col-md-3 col-sm-6">
+            <div class="product-grid2">
+                <div class="product-image2">
+                    <a href="#">
+                        <img class="pic-1" src="./image3.jpeg">
+                        <img class="pic-2" src="./img-2.jpeg">
+                    </a>
+                    <ul class="social">
+                            <li>
+                                  <a 
+                                    href="#product_view" 
+                                    data-tip="Quick View"
+                                    data-toggle="modal"
+                                    data-target="#product_view"
+                                    >
+                                    <i class="fa fa-eye"></i>
+                                  </a>
+                                  </li>
+                        
+                                  <li>
+                                    <a href="#" data-tip="Add to Wishlist"
+                                    >
+                                      <i class="fa fa-shopping-bag"></i>
+                                    </a>
+                                  </li>
+                                  
+                                  <li>
+                                      <a
+                                      class="cd-add-to-cart" 
+                                      href="#0" 
+                                      data-tip="Add to cart"
+                                      data-price="25.99"
+                                      >
+                                        <i class="fa fa-shopping-cart"></i>
+                                      </a>
+                                  </li>
+
+                              </li>
+                    </ul>
+                    <a 
+                    class="add-to-cart" 
+                    href="payment" 
+                    data-tip="Quick View"
+                    data-toggle="modal"
+                    data-target="#payment"
+                    >
+                    BUY THIS ITEM
+                  </a>
+                    
+                </div>
+                <div class="product-content">
+                    <h3 class="title"><a href="#">Women's Designer Top</a></h3>
+                    <span class="price">$599.99</span>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+            <div class="product-grid2">
+              <div class="product-image2">
+                  <a href="#">
+                      <img class="pic-1" src="http://bestjquery.com/tutorial/product-grid/demo3/images/img-3.jpeg">
+                      <img class="pic-2" src="http://bestjquery.com/tutorial/product-grid/demo3/images/img-4.jpeg">
+                  </a>
+                  <ul class="social">
+                      <li>
+                          <a href="#product_view" 
+                          data-tip="Quick View"
+                          data-toggle="modal"
+                          data-target="#product_view">
+                          <i class="fa fa-eye"></i></a>                          
+                        </li>
+                      <li><a href="#" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
+                      <li>
+                          <a
+                          class="cd-add-to-cart" 
+                          href="#0" 
+                          data-tip="Add to cart"
+                          data-price="25.99"
+                          >
+                            <i class="fa fa-shopping-cart"></i>
+                          </a>                      
+                        </li>
+                  </ul>
+                  <a 
+                  class="add-to-cart" 
+                  href="payment" 
+                  data-tip="Quick View"
+                  data-toggle="modal"
+                  data-target="#payment"
+                  >
+                  BUY THIS ITEM
+                </a>                
+              </div>
+                <div class="product-content">
+                    <h3 class="title"><a href="#">Women's Yellow Top</a></h3>
+                    <span class="price">$699.99</span>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+            <div class="product-grid2">
+                <div class="product-image2">
+                    <a href="#">
+                        <img class="pic-1" src="http://bestjquery.com/tutorial/product-grid/demo3/images/img-5.jpeg">
+                        <img class="pic-2" src="http://bestjquery.com/tutorial/product-grid/demo3/images/img-6.jpeg">
+                    </a>
+                    <ul class="social">
+                        <li>
+                            <a href="#product_view" 
+                            data-tip="Quick View"
+                            data-toggle="modal"
+                            data-target="#product_view">
+                            <i class="fa fa-eye"></i></a>                            </li>
+                        <li><a href="#" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
+                        <li>
+                            <a
+                            class="cd-add-to-cart" 
+                            href="#0" 
+                            data-tip="Add to cart"
+                            data-price="25.99"
+                            >
+                              <i class="fa fa-shopping-cart"></i>
+                            </a>
+                        </li>
+                    </ul>
+                    <a 
+                    class="add-to-cart" 
+                    href="payment" 
+                    data-tip="Quick View"
+                    data-toggle="modal"
+                    data-target="#payment"
+                    >
+                    BUY THIS ITEM
+                  </a>
+                </div>
+                <div class="product-content">
+                    <h3 class="title"><a href="#">Women's Designer Top</a></h3>
+                    <span class="price">$599.99</span>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+            <div class="product-grid2">
+                <div class="product-image2">
+                    <a href="#">
+                        <img class="pic-1" src="http://bestjquery.com/tutorial/product-grid/demo3/images/img-7.jpeg">
+                        <img class="pic-2" src="http://bestjquery.com/tutorial/product-grid/demo3/images/img-8.jpeg">
+                    </a>
+                    <ul class="social">
+                        <li>
+                          <a href="#product_view" 
+                            data-tip="Quick View"
+                            data-toggle="modal"
+                            data-target="#product_view">
+                            <i class="fa fa-eye"></i>
+                          </a>
+                        </li>
+                        
+                        <li>
+                          <a href="#" data-tip="Add to Wishlist">
+                          <i class="fa fa-shopping-bag"></i>
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            class="cd-add-to-cart" 
+                            href="#0" 
+                            data-tip="Add to cart"
+                            data-price="25.99"
+                            >
+                              <i class="fa fa-shopping-cart"></i>
+                            </a>
+                      </li>
+                    </ul>
+                    <a 
+                    class="add-to-cart" 
+                    href="payment" 
+                    data-tip="Quick View"
+                    data-toggle="modal"
+                    data-target="#payment"
+                    >
+                    BUY THIS ITEM
+                    </a>                
+                </div>
+                <div class="product-content">
+                    <h3 class="title">
+                      <a href="#">Women's Designer Top</a>
+                    </h3>
+                    <span class="price">$599.99</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- FIRST PRODUCT_LITS ENDS -->
+<br>
+<hr>
+<!-- SECOND PRODUCT_LITS STARTS -->
+<div class="container">
+        <h3 class="h3">PRODUCT_LIST </h3>
+        <div class="row">
+            <div class="col-md-3 col-sm-6">
+                <div class="product-grid2">
+                    <div class="product-image2">
+                        <a href="#">
+                            <img class="pic-1" src="./image3.jpeg">
+                            <img class="pic-2" src="./img-2.jpeg">
+                        </a>
+                        <ul class="social">
+                                <li>
+                                        <a href="#product_view" 
+                                        data-tip="Quick View"
+                                        data-toggle="modal"
+                                        data-target="#product_view">
+                                        <i class="fa fa-eye"></i></a>
+                                      </li>
+                            
+                                      <li><a href="#" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
+                                      <li>
+                                          <a
+                                          class="cd-add-to-cart" 
+                                          href="#0" 
+                                          data-tip="Add to cart"
+                                          data-price="25.99"
+                                          >
+                                            <i class="fa fa-shopping-cart"></i>
+                                          </a>                                      
+                                        </li>
+                        </ul>
+                        <a 
+                        class="add-to-cart" 
+                        href="payment" 
+                        data-tip="Quick View"
+                        data-toggle="modal"
+                        data-target="#payment"
+                        >
+                        BUY THIS ITEM
+                      </a>                    
+                    </div>
+                    <div class="product-content">
+                        <h3 class="title"><a href="#">Women's Designer Top</a></h3>
+                        <span class="price">$599.99</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <div class="product-grid2">
+                  <div class="product-image2">
+                      <a href="#">
+                          <img class="pic-1" src="http://bestjquery.com/tutorial/product-grid/demo3/images/img-3.jpeg">
+                          <img class="pic-2" src="http://bestjquery.com/tutorial/product-grid/demo3/images/img-4.jpeg">
+                      </a>
+                      <ul class="social">
+                          <li>
+                              <a href="#product_view" 
+                              data-tip="Quick View"
+                              data-toggle="modal"
+                              data-target="#product_view">
+                              <i class="fa fa-eye"></i></a>
+                          </li>                         
+                           <li>
+                             <a href="#" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a>
+                            </li>
+                          <li>
+                              <a
+                              class="cd-add-to-cart" 
+                              href="#0" 
+                              data-tip="Add to cart"
+                              data-price="25.99"
+                              >
+                                <i class="fa fa-shopping-cart"></i>
+                              </a>
+                          </li>
+                      </ul>
+                      <a 
+                      class="add-to-cart" 
+                      href="payment" 
+                      data-tip="Quick View"
+                      data-toggle="modal"
+                      data-target="#payment"
+                      >
+                      BUY THIS ITEM
+                    </a>                    
+                  </div>
+                    <div class="product-content">
+                        <h3 class="title"><a href="#">Women's Yellow Top</a></h3>
+                        <span class="price">$699.99</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <div class="product-grid2">
+                    <div class="product-image2">
+                        <a href="#">
+                            <img class="pic-1" src="http://bestjquery.com/tutorial/product-grid/demo3/images/img-5.jpeg">
+                            <img class="pic-2" src="http://bestjquery.com/tutorial/product-grid/demo3/images/img-6.jpeg">
+                        </a>
+                        <ul class="social">
+                            <li>
+                                <a href="#product_view" 
+                                data-tip="Quick View"
+                                data-toggle="modal"
+                                data-target="#product_view">
+                                <i class="fa fa-eye"></i></a>
+                            </li>                            
+                            <li>
+                              <a href="#" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a>
+                            </li>
+                            <li>
+                                <a
+                                class="cd-add-to-cart" 
+                                href="#0" 
+                                data-tip="Add to cart"
+                                data-price="25.99"
+                                >
+                                  <i class="fa fa-shopping-cart"></i>
+                                </a>                            
+                            </li>
+                            
+                        </ul>
+                        <a 
+                        class="add-to-cart" 
+                        href="payment" 
+                        data-tip="Quick View"
+                        data-toggle="modal"
+                        data-target="#payment"
+                        >
+                        BUY THIS ITEM
+                      </a>                           
+                    </div>
+                    <div class="product-content">
+                        <h3 class="title"><a href="#">Women's Designer Top</a></h3>
+                        <span class="price">$599.99</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <div class="product-grid2">
+                    <div class="product-image2">
+                        <a href="#">
+                            <img class="pic-1" src="http://bestjquery.com/tutorial/product-grid/demo3/images/img-7.jpeg">
+                            <img class="pic-2" src="http://bestjquery.com/tutorial/product-grid/demo3/images/img-8.jpeg">
+                        </a>
+                        <ul class="social">
+
+                            <li>
+                                <a href="#product_view" 
+                                data-tip="Quick View"
+                                data-toggle="modal"
+                                data-target="#product_view">
+                                <i class="fa fa-eye"></i></a>
+                            </li>
+                            <li>
+                              <a href="#" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a>
+                            </li>
+                            <li>
+                                <a
+                                class="cd-add-to-cart" 
+                                href="#0" 
+                                data-tip="Add to cart"
+                                data-price="25.99"
+                                >
+                                  <i class="fa fa-shopping-cart"></i>
+                                </a>                            
+                            </li>
+
+                        </ul>
+                        <a 
+                        class="add-to-cart" 
+                        href="payment" 
+                        data-tip="Quick View"
+                        data-toggle="modal"
+                        data-target="#payment"
+                        >
+                        BUY THIS ITEM
+                      </a>                           
+                    </div>
+                    <div class="product-content">
+                        <h3 class="title"><a href="#">Women's Designer Top</a></h3>
+                        <span class="price">$599.99</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+</div>
+<!-- SECOND PRODUCT_LITS ENDS -->
+<br>
+<hr>
+<!-- THIRD PRODUCT_LITS STARTS -->
+<div class="container">
+    <h3 class="h3">PRODUCT_LIST </h3>
+    <div class="row">
+        <div class="col-md-3 col-sm-6">
+            <div class="product-grid2">
+                <div class="product-image2">
+                    <a href="#">
+                        <img class="pic-1" src="./image3.jpeg">
+                        <img class="pic-2" src="./img-2.jpeg">
+                    </a>
+                    <ul class="social">
+                            <li>
+                                    <a href="#product_view" 
+                                    data-tip="Quick View"
+                                    data-toggle="modal"
+                                    data-target="#product_view">
+                                    <i class="fa fa-eye"></i></a>
+                                  </li>
+                        
+                                  <li><a href="#" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
+                                  <li>
+                                      <a
+                                      class="cd-add-to-cart" 
+                                      href="#0" 
+                                      data-tip="Add to cart"
+                                      data-price="25.99"
+                                      >
+                                        <i class="fa fa-shopping-cart"></i>
+                                      </a>
+                                    </li>
+                    </ul>
+                    <a 
+                    class="add-to-cart" 
+                    href="payment" 
+                    data-tip="Quick View"
+                    data-toggle="modal"
+                    data-target="#payment"
+                    >
+                    BUY THIS ITEM
+                  </a>                       
+                </div>
+                <div class="product-content">
+                    <h3 class="title"><a href="#">Women's Designer Top</a></h3>
+                    <span class="price">$599.99</span>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+            <div class="product-grid2">
+              <div class="product-image2">
+                  <a href="#">
+                      <img class="pic-1" src="http://bestjquery.com/tutorial/product-grid/demo3/images/img-3.jpeg">
+                      <img class="pic-2" src="http://bestjquery.com/tutorial/product-grid/demo3/images/img-4.jpeg">
+                  </a>
+                  <ul class="social">
+                      <li>
+                          <a href="#product_view" 
+                          data-tip="Quick View"
+                          data-toggle="modal"
+                          data-target="#product_view">
+                          <i class="fa fa-eye"></i></a>
+                      </li>                          <li><a href="#" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
+                      <li>
+                          <a
+                          class="cd-add-to-cart" 
+                          href="#0" 
+                          data-tip="Add to cart"
+                          data-price="25.99"
+                          >
+                            <i class="fa fa-shopping-cart"></i>
+                          </a>
+                        </li>
+                  </ul>
+                  <a 
+                  class="add-to-cart" 
+                  href="payment" 
+                  data-tip="Quick View"
+                  data-toggle="modal"
+                  data-target="#payment"
+                  >
+                  BUY THIS ITEM
+                </a>                       
+              </div>
+                <div class="product-content">
+                    <h3 class="title"><a href="#">Women's Yellow Top</a></h3>
+                    <span class="price">$699.99</span>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+            <div class="product-grid2">
+                <div class="product-image2">
+                    <a href="#">
+                        <img class="pic-1" src="http://bestjquery.com/tutorial/product-grid/demo3/images/img-5.jpeg">
+                        <img class="pic-2" src="http://bestjquery.com/tutorial/product-grid/demo3/images/img-6.jpeg">
+                    </a>
+                    <ul class="social">
+                        <li>
+                            <a href="#product_view" 
+                            data-tip="Quick View"
+                            data-toggle="modal"
+                            data-target="#product_view">
+                            <i class="fa fa-eye"></i></a>
+                        </li>                            
+                        <li><a href="#" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
+                        <li>
+                            <a
+                            class="cd-add-to-cart" 
+                            href="#0" 
+                            data-tip="Add to cart"
+                            data-price="25.99"
+                            >
+                              <i class="fa fa-shopping-cart"></i>
+                            </a>                        
+                        </li>
+                    </ul>
+                    <a 
+                    class="add-to-cart" 
+                    href="payment" 
+                    data-tip="Quick View"
+                    data-toggle="modal"
+                    data-target="#payment"
+                    >
+                    BUY THIS ITEM
+                  </a>                       
+                </div>
+                <div class="product-content">
+                    <h3 class="title"><a href="#">Women's Designer Top</a></h3>
+                    <span class="price">$599.99</span>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+            <div class="product-grid2">
+                <div class="product-image2">
+                    <a href="#">
+                        <img class="pic-1" src="http://bestjquery.com/tutorial/product-grid/demo3/images/img-7.jpeg">
+                        <img class="pic-2" src="http://bestjquery.com/tutorial/product-grid/demo3/images/img-8.jpeg">
+                    </a>
+                    <ul class="social">
+                        <li>
+                            <a href="#product_view" 
+                            data-tip="Quick View"
+                            data-toggle="modal"
+                            data-target="#product_view">
+                            <i class="fa fa-eye"></i></a>
+                        </li>
+                        <li><a href="#" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
+                        <li>
+                            <a
+                            class="cd-add-to-cart" 
+                            href="#0" 
+                            data-tip="Add to cart"
+                            data-price="25.99"
+                            >
+                              <i class="fa fa-shopping-cart"></i>
+                            </a>                        
+                        </li>
+                    </ul>
+                    <a 
+                    class="add-to-cart" 
+                    href="payment" 
+                    data-tip="Quick View"
+                    data-toggle="modal"
+                    data-target="#payment"
+                    >
+                    BUY THIS ITEM
+                  </a>                       
+                </div>
+                <div class="product-content">
+                    <h3 class="title"><a href="#">Women's Designer Top</a></h3>
+                    <span class="price">$599.99</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- THIRD PRODUCT_LITS ENDS -->
+
+<br>
+<hr>
+    
+ <!-- TRENDING-PRODUCTS -->
+<div class="container trending-view">
+    <div class="row">
+      <div class="col-md-12">
+      <h2>Trending <b>Products</b></h2>
+        <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="0">
+        <!-- Carousel indicators -->
+        <ol class="carousel-indicators trending-view">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+        </ol>   
+        <!-- Wrapper for carousel items -->
+        <div class="carousel-inner trending-view">
+        <div class="item carousel-item active">
+        <div class="row">
+        <div class="col-sm-3">
+        <div class="thumb-wrapper">
+        <div class="img-box">
+          <img src="./img-2.jpeg" class="img-responsive img-fluid" alt="">
+        </div>
+        <div class="thumb-content">
+            <h4>BAG</h4>
+            <p class="item-price">
+              <strike>Rs 1350.00</strike>
+              <span>Rs 1000.00</span>
+            </p>
+            <div class="star-rating">
+            <ul class="list-inline">
+              <li class="list-inline-item"><i class="fa fa-star"></i></li>
+              <li class="list-inline-item"><i class="fa fa-star"></i></li>
+              <li class="list-inline-item"><i class="fa fa-star"></i></li>
+              <li class="list-inline-item"><i class="fa fa-star"></i></li>
+              <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
+            </ul>
+          </div>
+          <br>
+          <a href="0#" 
+          class="btn btn-success cd-add-to-cart" 
+          data-tip="Add to cart"
+          data-price="25.99">Add to Cart
+                <i class="fa fa-shopping-cart-sm"></i>
+              </a>                      
+        </div>						
+        </div>
+        </div>
+        <div class="col-sm-3">
+        <div class="thumb-wrapper">
+        <div class="img-box">
+          <img src="./img-2.jpeg" class="img-responsive img-fluid" alt="">
+        </div>
+        <div class="thumb-content">
+            <h4>BAG</h4>
+            <p class="item-price">
+              <strike>Rs 1350.00</strike>
+              <span>Rs 1000.00</span>
+            </p>
+            <div class="star-rating">
+            <ul class="list-inline">
+              <li class="list-inline-item"><i class="fa fa-star"></i></li>
+              <li class="list-inline-item"><i class="fa fa-star"></i></li>
+              <li class="list-inline-item"><i class="fa fa-star"></i></li>
+              <li class="list-inline-item"><i class="fa fa-star"></i></li>
+              <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
+            </ul>
+          </div>
+          <br>
+          <a href="0#" 
+          class="btn btn-success cd-add-to-cart" 
+          data-tip="Add to cart"
+          data-price="25.99">Add to Cart
+                <i class="fa fa-shopping-cart-sm"></i>
+              </a>                      
+        </div>						
+        </div>
+        </div>		
+        <div class="col-sm-3">
+        <div class="thumb-wrapper">
+        <div class="img-box">
+          <img src="./img-2.jpeg" class="img-responsive img-fluid" alt="">
+        </div>
+        <div class="thumb-content">
+            <h4>BAG</h4>
+            <p class="item-price">
+              <strike>Rs 1350.00</strike>
+              <span>Rs 1000.00</span>
+            </p>                        
+            <div class="star-rating">
+            <ul class="list-inline">
+              <li class="list-inline-item"><i class="fa fa-star"></i></li>
+              <li class="list-inline-item"><i class="fa fa-star"></i></li>
+              <li class="list-inline-item"><i class="fa fa-star"></i></li>
+              <li class="list-inline-item"><i class="fa fa-star"></i></li>
+              <li class="list-inline-item"><i class="fa fa-star-half-o"></i></li>
+            </ul>
+          </div>
+          <br>
+          <a href="0#" 
+          class="btn btn-success cd-add-to-cart" 
+          data-tip="Add to cart"
+          data-price="25.99">Add to Cart
+                <i class="fa fa-shopping-cart-sm"></i>
+              </a>                      
+        </div>						
+        </div>
+        </div>								
+        <div class="col-sm-3">
+        <div class="thumb-wrapper">
+        <div class="img-box">
+          <img src="./img-2.jpeg" class="img-responsive img-fluid" alt="">
+        </div>
+        <div class="thumb-content">
+            <h4>BAG</h4>
+            <p class="item-price">
+              <strike>Rs 1350.00</strike>
+              <span>Rs 1000.00</span>
+            </p>
+            <div class="star-rating">
+            <ul class="list-inline">
+              <li class="list-inline-item"><i class="fa fa-star"></i></li>
+              <li class="list-inline-item"><i class="fa fa-star"></i></li>
+              <li class="list-inline-item"><i class="fa fa-star"></i></li>
+              <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
+              <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
+            </ul>
+          </div>
+          <br>
+          <a href="0#" 
+          class="btn btn-success cd-add-to-cart" 
+          data-tip="Add to cart"
+          data-price="25.99">Add to Cart
+                <i class="fa fa-shopping-cart-sm"></i>
+              </a>                      
+        </div>						
+        </div>
+        </div>
+        </div>
+        </div>
+        <div class="item carousel-item">
+        <div class="row">
+        <div class="col-sm-3">
+        <div class="thumb-wrapper">
+        <div class="img-box">
+          <img src="./img-2.jpeg" class="img-responsive img-fluid" alt="">
+        </div>
+        <div class="thumb-content">
+            <h4>BAG</h4>
+            <p class="item-price">
+              <strike>Rs 1350.00</strike>
+              <span>Rs 1000.00</span>
+            </p>                        
+            <div class="star-rating">
+            <ul class="list-inline">
+              <li class="list-inline-item"><i class="fa fa-star"></i></li>
+              <li class="list-inline-item"><i class="fa fa-star"></i></li>
+              <li class="list-inline-item"><i class="fa fa-star"></i></li>
+              <li class="list-inline-item"><i class="fa fa-star"></i></li>
+              <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
+            </ul>
+          </div>
+          <br>
+          <a href="0#" 
+          class="btn btn-success cd-add-to-cart" 
+          data-tip="Add to cart"
+          data-price="25.99">Add to Cart
+                <i class="fa fa-shopping-cart-sm"></i>
+              </a>                      
+        </div>						
+        </div>
+        </div>
+        <div class="col-sm-3">
+        <div class="thumb-wrapper">
+        <div class="img-box">
+          <img src="./img-2.jpeg" class="img-responsive img-fluid" alt="">
+        </div>
+        <div class="thumb-content">
+            <h4>BAG</h4>
+            <p class="item-price">
+              <strike>Rs 1350.00</strike>
+              <span>Rs 1000.00</span>
+            </p>                        
+            <div class="star-rating">
+            <ul class="list-inline">
+              <li class="list-inline-item"><i class="fa fa-star"></i></li>
+              <li class="list-inline-item"><i class="fa fa-star"></i></li>
+              <li class="list-inline-item"><i class="fa fa-star"></i></li>
+              <li class="list-inline-item"><i class="fa fa-star"></i></li>
+              <li class="list-inline-item"><i class="fa fa-star-half-o"></i></li>
+            </ul>
+          </div>
+          <br>
+          <a href="0#" 
+          class="btn btn-success cd-add-to-cart" 
+          data-tip="Add to cart"
+          data-price="25.99">Add to Cart
+                <i class="fa fa-shopping-cart-sm"></i>
+              </a>                      
+        </div>						
+        </div>
+        </div>
+        <div class="col-sm-3">
+        <div class="thumb-wrapper">
+        <div class="img-box">
+          <img src="./img-2.jpeg" class="img-responsive img-fluid" alt="">
+        </div>
+        <div class="thumb-content">
+          <h4>Bose Speaker</h4>
+          <p class="item-price"><strike>$109.00</strike> <span>$99.00</span></p>
+          <div class="star-rating">
+            <ul class="list-inline">
+              <li class="list-inline-item"><i class="fa fa-star"></i></li>
+              <li class="list-inline-item"><i class="fa fa-star"></i></li>
+              <li class="list-inline-item"><i class="fa fa-star"></i></li>
+              <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
+              <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
+            </ul>
+          </div>
+          <br>
+          <a href="0#" 
+          class="btn btn-success cd-add-to-cart" 
+          data-tip="Add to cart"
+          data-price="25.99">Add to Cart
+                <i class="fa fa-shopping-cart-sm"></i>
+              </a>                      
+        </div>						
+        </div>
+        </div>
+        <div class="col-sm-3">
+        <div class="thumb-wrapper">
+        <div class="img-box">
+          <img src="./img-2.jpeg" class="img-responsive img-fluid" alt="">
+        </div>
+        <div class="thumb-content">
+            <h4>BAG</h4>
+            <p class="item-price">
+              <strike>Rs 1350.00</strike>
+              <span>Rs 1000.00</span>
+            </p>                        
+            <div class="star-rating">
+            <ul class="list-inline">
+              <li class="list-inline-item"><i class="fa fa-star"></i></li>
+              <li class="list-inline-item"><i class="fa fa-star"></i></li>
+              <li class="list-inline-item"><i class="fa fa-star"></i></li>
+              <li class="list-inline-item"><i class="fa fa-star"></i></li>
+              <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
+            </ul>
+          </div>
+          <br>
+          <a href="0#" 
+          class="btn btn-success cd-add-to-cart" 
+          data-tip="Add to cart"
+          data-price="25.99">Add to Cart
+                <i class="fa fa-shopping-cart-sm"></i>
+              </a>                      
+        </div>						
+        </div>
+        </div>						
+        </div>
+        </div>
+        <div class="item carousel-item">
+        <div class="row">
+        <div class="col-sm-3">
+        <div class="thumb-wrapper">
+        <div class="img-box">
+          <img src="./img-2.jpeg" class="img-responsive img-fluid" alt="">
+        </div>
+        <div class="thumb-content">
+            <h4>BAG</h4>
+            <p class="item-price">
+              <strike>Rs 1350.00</strike>
+              <span>Rs 1000.00</span>
+            </p>                        
+            <div class="star-rating">
+            <ul class="list-inline">
+              <li class="list-inline-item"><i class="fa fa-star"></i></li>
+              <li class="list-inline-item"><i class="fa fa-star"></i></li>
+              <li class="list-inline-item"><i class="fa fa-star"></i></li>
+              <li class="list-inline-item"><i class="fa fa-star"></i></li>
+              <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
+            </ul>
+          </div>
+          <br>
+          <a href="0#" 
+          class="btn btn-success cd-add-to-cart" 
+          data-tip="Add to cart"
+          data-price="25.99">Add to Cart
+                <i class="fa fa-shopping-cart-sm"></i>
+              </a>                      
+        </div>						
+        </div>
+        </div>
+        <div class="col-sm-3">
+        <div class="thumb-wrapper">
+        <div class="img-box">
+          <img src="./img-2.jpeg" class="img-responsive img-fluid" alt="">
+        </div>
+        <div class="thumb-content">
+            <h4>BAG</h4>
+            <p class="item-price">
+              <strike>Rs 1350.00</strike>
+              <span>Rs 1000.00</span>
+            </p>                        
+            <div class="star-rating">
+            <ul class="list-inline">
+              <li class="list-inline-item"><i class="fa fa-star"></i></li>
+              <li class="list-inline-item"><i class="fa fa-star"></i></li>
+              <li class="list-inline-item"><i class="fa fa-star"></i></li>
+              <li class="list-inline-item"><i class="fa fa-star"></i></li>
+              <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
+            </ul>
+          </div>
+          <br>
+          <a href="0#" 
+          class="btn btn-success cd-add-to-cart" 
+          data-tip="Add to cart"
+          data-price="25.99">Add to Cart
+                <i class="fa fa-shopping-cart-sm"></i>
+              </a>                      
+        </div>						
+        </div>
+        </div>
+        <div class="col-sm-3">
+        <div class="thumb-wrapper">
+        <div class="img-box">
+          <img src="./img-2.jpeg" class="img-responsive img-fluid" alt="">
+        </div>
+        <div class="thumb-content">
+            <h4>BAG</h4>
+            <p class="item-price">
+              <strike>Rs 1350.00</strike>
+              <span>Rs 1000.00</span>
+            </p>                        <div class="star-rating">
+            <ul class="list-inline">
+              <li class="list-inline-item"><i class="fa fa-star"></i></li>
+              <li class="list-inline-item"><i class="fa fa-star"></i></li>
+              <li class="list-inline-item"><i class="fa fa-star"></i></li>
+              <li class="list-inline-item"><i class="fa fa-star"></i></li>
+              <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
+            </ul>
+          </div>
+          <br>
+          <a href="0#" 
+          class="btn btn-success cd-add-to-cart" 
+          data-tip="Add to cart"
+          data-price="25.99">Add to Cart
+                <i class="fa fa-shopping-cart-sm"></i>
+              </a>                      
+        </div>						
+        </div>
+        </div>	
+        <div class="col-sm-3">
+        <div class="thumb-wrapper">
+        <div class="img-box">
+          <img src="./img-2.jpeg" 
+          class="img-responsive img-fluid" 
+          alt="">
+        </div>
+        <div class="thumb-content">
+          <h4>BAG</h4>
+          <p class="item-price">
+            <strike>Rs 1350.00</strike>
+            <span>Rs 1000.00</span>
+          </p>
+          <div class="star-rating">
+            <ul class="list-inline">
+              <li class="list-inline-item"><i 
+                class="fa fa-star"></i></li>
+              <li class="list-inline-item"><i 
+                class="fa fa-star"></i></li>
+              <li class="list-inline-item"><i 
+                class="fa fa-star"></i></li>
+              <li class="list-inline-item"><i 
+                class="fa fa-star"></i></li>
+              <li class="list-inline-item"><i 
+                class="fa fa-star-o"></i></li>
+            </ul>
+          </div>
+          <br>
+          <a 
+            href="0#" 
+            class="btn btn-success cd-add-to-cart" 
+            data-tip="Add to cart"
+            data-price="25.99">Add to Cart
+            <i class="fa fa-shopping-cart-sm"></i>
+          </a>                      
+        </div>						
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+        <!-- Carousel controls -->
+        <a class="trending-view carousel-control left carousel-control-prev" href="#myCarousel" data-slide="prev">
+        <i class="fa fa-angle-left"></i>
+        </a>
+        <a class="trending-view carousel-control right carousel-control-next" href="#myCarousel" data-slide="next">
+        <i class="fa fa-angle-right"></i>
+        </a>
+        </div>
+      </div>
+    </div>
+</div> 
+<br>
+
+<br>        
+<hr>   
+   
+<footer>
+  <div align="center">
+    <p style="color:darkgrey; font-size:13px;">
+      <h5>
+        Dailo Online Store&copy2018
+      </h5>
+    </p>
+    <a
+    href="https://www.facebook.com/dailo.onlineshopping/?_rdc=2&_rdr"
+    class="fa fa-facebook-official BIK-hover-opacity"
+    ></a>
+    <a
+    href="https://www.instagram.com/accounts/login/"
+    class="fa fa-instagram BIK-hover-opacity"
+    ></a>
+    <a
+    href="https://accounts.snapchat.com/accounts/login?message=The"
+    class="fa fa-snapchat BIK-hover-opacity"
+    ></a>
+    <a
+    href="https://www.pinterest.com/login/ "
+    class="fa fa-pinterest BIK-hover-opacity"
+    ></a>
+    <a
+    href="https://twitter.com/twitt_login?lang=en"
+    class="fa fa-twitter BIK-hover-opacity"
+    ></a>
+  </div>
+</footer> 
+<div class="like-button">
+    <a onclick="topFunction()" id="myBtn" title="#" 
+        class="btn icon-btn btn-primary" href="#">
+        <span 
+        class="glyphicon btn-glyphicon glyphicon-thumbs-up img-circle text-primary">
+      </span>
+      Like
+    </a>
+</div>
+
+<script>
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+document.getElementById("myBtn").style.display = "block";
+} else {
+document.getElementById("myBtn").style.display = "block";
+}
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+document.body.scrollTop = 0;
+document.documentElement.scrollTop = 0;
+}
+</script>
+
+<div class="checkout">
+  <div class="modal contaner" id="checkout">
+      <fieldset class="fieldset-style">
+          <legend class="project-style" align="center"><h3><b>CONTACT<b></h3> 
+          </legend>
+            <a href="#" data-dismiss="modal" class="class pull-right"
+    ><span class="glyphicon glyphicon-remove" style="color:rgb(253, 2, 2)"></span
+    ></a>
+
+    <table id="cart" class="table table-hover table-condensed">
+    <thead>
+    <tr>
+    <th style="width:50%">Product</th>
+    <th style="width:10%">Price</th>
+    <th style="width:8%">Quantity</th>
+    <th style="width:22%" class="text-center">Subtotal</th>
+    <th style="width:10%"></th>
+    </tr>
+    </thead>
+
+    <tbody>
+    <tr>
+    <td data-th="Product">
+    <div class="row">
+      <div class="col-sm-2 hidden-xs">
+        <img
+          src="http://placehold.it/100x100"
+          alt="..."
+          class="img-responsive"
+        />
+      </div>
+      <div class="col-sm-10">
+        <h4 class="nomargin">Product 1</h4>
+        <p>
+          Quis aute iure reprehenderit in voluptate velit esse cillum
+          dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet.
+        </p>
+      </div>
+    </div>
+    </td>
+    <td data-th="Price">$1.99</td>
+    <td data-th="Quantity">
+    <input type="number" class="form-control text-center" value="1" />
+    </td>
+    <td data-th="Subtotal" class="text-center">1.99</td>
+    <td class="actions" data-th="">
+    <button class="btn btn-info btn-sm">
+      <i class="fa fa-refresh"></i>
+    </button>
+    <button class="btn btn-danger btn-sm">
+      <i class="fa fa-trash-o"></i>
+    </button>
+    </td>
+    </tr>
+    <tfoot>
+    <tr class="visible-xs">
+      <td class="text-center"><strong>Total 1.99</strong></td>
+    </tr>
+    <tr>
+      <td>
+        <button 
+              href="payment" 
+              data-tip="Quick View"
+              data-toggle="modal"
+              data-target="#payment"
+              type="button" 
+              class="btn btn-warning navbar-content"
+                > 
+          Continue Shopping
+
+        </button>         
+      </td>
+      <td colspan="2" class="hidden-xs"></td>
+      <td class="hidden-xs text-center"><strong>Total $1.99</strong></td>
+      <td>
+        <button 
+              href="payment" 
+              data-tip="Quick View"
+              data-toggle="modal"
+              data-target="#payment"
+              type="button" 
+              class="btn btn-success navbar-content"
+                > 
+            Pay
+
+        </button>         
+      </td>
+    </tr>
+    </tfoot>
+
+    </tbody>
+
+    <tfoot>
+    <tr class="visible-xs">
+    <td class="text-center"><strong>Total 1.99</strong></td>
+    </tr>
+    </tfoot>
+
+    <thead>
+    <tr>
+    <th style="width:50%">Product</th>
+    <th style="width:10%">Price</th>
+    <th style="width:8%">Quantity</th>
+    <th style="width:22%" class="text-center">Subtotal</th>
+    <th style="width:10%"></th>
+    </tr>
+    </thead>
+
+    <tbody>
+    <tr>
+    <td data-th="Product">
+    <div class="row">
+      <div class="col-sm-2 hidden-xs">
+        <img
+          src="http://placehold.it/100x100"
+          alt="..."
+          class="img-responsive"
+        />
+      </div>
+      <div class="col-sm-10">
+        <h4 class="nomargin">Product 1</h4>
+        <p>
+          Quis aute iure reprehenderit in voluptate velit esse cillum
+          dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet.
+        </p>
+      </div>
+    </div>
+    </td>
+    <td data-th="Price">$1.99</td>
+    <td data-th="Quantity">
+    <input type="number" class="form-control text-center" value="1" />
+    </td>
+    <td data-th="Subtotal" class="text-center">1.99</td>
+    <td class="actions" data-th="">
+    <button class="btn btn-info btn-sm">
+      <i class="fa fa-refresh"></i>
+    </button>
+    <button class="btn btn-danger btn-sm">
+      <i class="fa fa-trash-o"></i>
+    </button>
+    </td>
+    </tr>
+    </tbody>
+    </table>
+  </fieldset>
+  </div>
+</div>
+
+<!-- Register  Starts-->
+<div class="register">
+<div class="modal fade" id="register">
+<div class="row main">
+<div class="main-login main-center">
+<a href="#" data-dismiss="modal" class="class pull-right"
+><span class="glyphicon glyphicon-remove" style="color:rgb(253, 2, 127)"></span
+></a>
+
+<form class="" method="post" action="#">
+<div class="form-group">
+  <label for="name" class="cols-sm-2 control-label">Your Name</label>
+  <div class="cols-sm-10">
+    <div class="input-group">
+      <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
+      <input type="text" class="form-control" name="name" id="name"  placeholder="Enter your Name"/>
+    </div>
+  </div>
+</div>
+
+<div class="form-group">
+  <label for="email" class="cols-sm-2 control-label">Your Email</label>
+  <div class="cols-sm-10">
+    <div class="input-group">
+      <span class="input-group-addon"><i class="fa fa-envelope fa" aria-hidden="true"></i></span>
+      <input type="text" class="form-control" name="email" id="email"  placeholder="Enter your Email"/>
+    </div>
+  </div>
+</div>
+
+<div class="form-group">
+  <label for="username" class="cols-sm-2 control-label">Username</label>
+  <div class="cols-sm-10">
+    <div class="input-group">
+      <span class="input-group-addon"><i class="fa fa-users fa" aria-hidden="true"></i></span>
+      <input type="text" class="form-control" name="username" id="username"  placeholder="Enter your Username"/>
+    </div>
+  </div>
+</div>
+
+<div class="form-group">
+  <label for="password" class="cols-sm-2 control-label">Password</label>
+  <div class="cols-sm-10">
+    <div class="input-group">
+      <span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+      <input type="password" class="form-control" name="password" id="password"  placeholder="Enter your Password"/>
+    </div>
+  </div>
+</div>
+
+<div class="form-group">
+  <label for="confirm" class="cols-sm-2 control-label">Confirm Password</label>
+  <div class="cols-sm-10">
+    <div class="input-group">
+      <span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+      <input type="password" class="form-control" name="confirm" id="confirm"  placeholder="Confirm your Password"/>
+    </div>
+  </div>
+</div>
+
+<div class="form-group ">
+  <a href="https://deepak646.blogspot.com/" target="_blank" type="button" id="button" class="btn btn-primary btn-lg btn-block login-button">Register</a>
+</div>
+
+</form>
+</div>
+</div>
+</div>
+
+</div>
+<!-- Register Ends-->
+
+<!-- PAYMENT -->
+<div class="payment">
+  <div class="modal fade product_view" id="payment">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+            <a href="#" data-dismiss="modal" class="class pull-right"
+            ><span class="glyphicon glyphicon-remove" style="color:gold"></span
+            ></a>
+            <div class="panel panel-primary">
+              <div class="panel-heading">
+              <h3 class="modal-title">                        
+                      WATCH
+              </h3>
+            </div>
+            </div>
+        </div>
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-md-6 product_img">
+                <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                  <!-- Indicators -->
+                  <ol class="carousel-indicators">
+                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#myCarousel" data-slide-to="1"></li>
+                    <li data-target="#myCarousel" data-slide-to="2"></li>
+                  </ol>
+              
+                  <!-- Wrapper for slides -->
+                  
+                  <div class="carousel-inner">
+                    <div class="item active">
+                      <img 
+                      class="img-responsive"
+                      id="2"
+                      data-toggle="modal"
+                      data-target="#myModal"
+                      src="img-2.jpeg" 
+                      alt="Back-view" 
+                      style="width:100%;">
+                      <div class="carousel-caption">
+                        <h3>Back-View</h3>
+                        <p>RADO WATCH PREMIUM</p>
+                      </div>
+                      
+                    </div>
+                      
+                    <div class="item">
+                        <img src="img-2.jpeg" alt="Side-View" style="width:100%;">
+                        <div class="carousel-caption">
+                          <h3>Side-View</h3>
+                          <p>RADO WATCH PREMIUM</p>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                      <img src="img-2.jpeg" alt="Front-View" style="width:100%;">
+                      <div class="carousel-caption">
+                        <h3>Front-View</h3>
+                        <p>RADO WATCH PREMIUM</p>
+                      </div>
+                    </div>
+
+                  </div>
+                  <!-- Left and right controls -->
+                  <a class="left carousel-control respoinsive" href="#myCarousel" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left"></span>
+                    <span class="sr-only">Previous</span>
+                  </a>
+                  <a class="right carousel-control respoinsive" href="#myCarousel" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right"></span>
+                    <span class="sr-only">Next</span>
+                  </a>
+            </div>
+            </div>
+          </div>
+            <div class="row">
+                <div class="col-xs-12 col-sm-6">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">
+                                Payment Details
+                            </h3>
+                            <div class="checkbox pull-right">
+                                <label>
+                                    <input type="checkbox" />
+                                    Remember
+                                </label>
+                            </div>
+                        </div>
+                        <div class="panel-body">
+                            <form role="form">
+                            <div class="form-group">
+                                <label for="cardNumber">
+                                    CARD NUMBER</label>
+                                <div class="input-group">
+                                    <input type="text" class="form-control" id="cardNumber" placeholder="Valid Card Number"
+                                        required autofocus />
+                                    <span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-7 col-md-">
+                                    <div class="form-group">
+                                        <label for="expityMonth">
+                                            EXPIRY DATE</label>
+                                        <div class="col-xs-6 col-lg-7 pl-ziro">
+                                            <input type="text" class="form-control" id="expityMonth" placeholder="MM" required />
+                                        </div>
+                                        <div class="col-xs-6 col-lg-7 pl-ziro">
+                                            <input type="text" class="form-control" id="expityYear" placeholder="YY" required /></div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-5 col-md-4 pull-right">
+                                    <div class="form-group">
+                                        <label for="cvCode">
+                                            CV CODE</label>
+                                        <input type="password" class="form-control" id="cvCode" placeholder="CV" required />
+                                    </div>
+                                </div>
+                            </div>
+                            </form>
+                        </div>
+                    </div>
+                    <ul class="nav nav-pills nav-stacked">
+                        <li class="active"><a href="#"><span class="badge pull-right"><span class="glyphicon glyphicon-usd"></span>4200</span> Final Payment</a>
+                        </li>
+                    </ul>
+                    <br/>
+                    <a href="http://www.jquery2dotnet.com" class="btn btn-success btn-lg btn-block" role="button">Pay</a>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Product View Starts-->
+<div class="modal fade product_view" id="product_view">
+<div class="modal-dialog">
+    <div class="modal-content">
+    <div class="modal-header">
+      <a href="#" data-dismiss="modal" class="class pull-right"
+  ><span class="glyphicon glyphicon-remove"></span
+      ></a>
+    <div class="panel panel-primary">
+    <div class="panel-heading">
+    <h3 class="modal-title">                        
+            WATCH
+        </h3>
+  </div>
+  </div>
+  <div class="modal-body">
+  <div class="row">
+  <div class="col-md-6 product_img">
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+          <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+          <li data-target="#myCarousel" data-slide-to="1"></li>
+          <li data-target="#myCarousel" data-slide-to="2"></li>
+        </ol>
+    
+        <!-- Wrapper for slides -->
+        
+        <div class="carousel-inner">
+          <div class="item active">
+            <img 
+            class="img-responsive"
+            id="2"
+            data-toggle="modal"
+            data-target="#myModal"
+            src="Rado.jpg" 
+            alt="Back-view" 
+            style="width:100%;">
+            <div class="carousel-caption">
+              <h3>Back-View</h3>
+              <p>RADO WATCH PREMIUM</p>
+            </div>
+          </div>
+          <div class="item">
+            <img src="Rado.jpg" alt="Side-View" style="width:100%;">
+            <div class="carousel-caption">
+              <h3>Side-View</h3>
+              <p>RADO WATCH PREMIUM</p>
+            </div>
+          </div>
+          <div class="item">
+            <img src="rado.jpg" alt="Front-View" style="width:100%;">
+            <div class="carousel-caption">
+              <h3>Front-View</h3>
+              <p>RADO WATCH PREMIUM</p>
+            </div>
+          </div>
+        </div>
+        <!-- Left and right controls -->
+        <a class="left carousel-control respoinsive" href="#myCarousel" data-slide="prev">
+          <span class="glyphicon glyphicon-chevron-left"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control respoinsive" href="#myCarousel" data-slide="next">
+          <span class="glyphicon glyphicon-chevron-right"></span>
+          <span class="sr-only">Next</span>
+        </a>
+  </div>
+  </div>
+  <div class="col-md-6 product_content">
+  <h4>Product Id: <span>51526</span></h4>
+  <div class="rating">
+  <span class="glyphicon glyphicon-star"></span>
+  <span class="glyphicon glyphicon-star"></span>
+  <span class="glyphicon glyphicon-star"></span>
+  <span class="glyphicon glyphicon-star"></span>
+  <span class="glyphicon glyphicon-star"></span> (10 reviews)
+  </div>
+  <p>
+  Lorem Ipsum is simply dummy text of the printing and
+  typesetting industry. Lorem Ipsum has been the industry's
+  standard dummy text ever since the 1500s, when an unknown
+  printer took a galley of type and scrambled it to make a type
+  specimen book.Lorem Ipsum is simply dummy text of the printing
+  and typesetting industry.
+  </p>
+  <h3 class="cost">
+  <span class="glyphicon glyphicon-usd"></span> 75.00
+  <small class="pre-cost"
+  ><span class="glyphicon glyphicon-usd"></span> 60.00</small
+  >
+  </h3>
+  <div class="row">
+  <div class="col-md-4 col-sm-6 col-xs-12">
+  <select class="form-control" name="select">
+    <option value="" selected="">Color</option>
+    <option value="black">Black</option>
+    <option value="white">White</option>
+    <option value="gold">Gold</option>
+    <option value="rose gold">Rose Gold</option>
+  </select>
+  </div>
+  <!-- end col -->
+  <div class="col-md-4 col-sm-6 col-xs-12">
+  <select class="form-control" name="select">
+    <option value="">Capacity</option>
+    <option value="">16GB</option>
+    <option value="">32GB</option>
+    <option value="">64GB</option>
+    <option value="">128GB</option>
+  </select>
+  </div>
+  <!-- end col -->
+  <div class="col-md-4 col-sm-12">
+  <select class="form-control" name="select">
+    <option value="" selected="">QTY</option>
+    <option value="">1</option>
+    <option value="">2</option>
+    <option value="">3</option>
+  </select>
+  </div>
+  <!-- end col -->
+  </div>
+  <div class="space-ten"></div>
+  <div class="btn-ground">
+  <button type="button" class="btn btn-primary">
+  <span class="glyphicon glyphicon-shopping-cart"></span> Add
+  To Cart
+  </button>
+  <button type="button" class="btn btn-primary">
+  <span class="glyphicon glyphicon-heart"></span> Add To
+  Wishlist
+  </button>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+</div>
+</div>
+</div>
+
+<!-- Product View Ends-->
+<li class="dropdown">
+    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+    <span class="glyphicon glyphicon-user"></span> Your Account
+    <b class="caret"></b></a>
+    <ul class="dropdown-menu" >
+<li>
+<div class="navbar-content">
+<div class="row">
+<div class="col-md-5">
+    <img src="./photo-pp.JPG"
+        alt="Alternate Text" class="img-responsive" />
+    <p class="text-center small">
+        <a href="#">Change Photo</a></p>
+</div>
+<div class="col-md-7">
+    <span>Bikash Adhikari</span>
+    <br>
+    <p class="text-muted small">
+        bikashthedreamer@gmail.com</p>
+    <div class="divider">
+    </div>
+    <a href="#" class="btn btn-primary btn-sm active">View Profile</a>
+</div>
+</div>
+</div>
+<div class="navbar-footer">
+<div class="navbar-footer-content">
+<div class="row">                                      
+  <br>
+    <div class="col-md-6">
+        
+  <a data-tip="Quick View" data-toggle="modal" data-target="#" type="button" href="#" class="btn btn-info btn-sm">
+
+        Change Passowrd
+      </a>
+    </div>    
+    <div class="col-md-6">
+        <a href="#" class="btn btn-info btn-sm pull-right">Sign Out</a>
+    </div>
+</div>
+</div>
+</div>
+</li>
+</ul>
+</li>
+<hr>
+</body>
+</html>
